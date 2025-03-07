@@ -31,7 +31,15 @@ cd task-manager
 npm install
 ```
 
-### 3. Start the Development Server
+### 3. Configure API Base URL (if running backend locally)
+
+If you're running the backend locally, update the `API_BASE_URL` in: `src/config.ts`
+
+``` export const API_BASE_URL = 'http://localhost:port_number'; ```
+
+Replace `port_number` with the backend server's port number.
+
+### 4. Start the Development Server
 
 ```sh
 npm run dev
@@ -39,13 +47,13 @@ npm run dev
 
 This will start the Vite development server. Open [http://localhost:5173](http://localhost:5173) in your browser to view the app.
 
-### 4. Build for Production
+### 5. Build for Production
 
 ```sh
 npm run build
 ```
 
-### 5. Preview the Production Build
+### 6. Preview the Production Build
 
 ```sh
 npm run preview
