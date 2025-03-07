@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 import Navbar from "../../components/navbar/navbar";
 import AddTask from "../../components/addTask/addTask";
@@ -68,7 +69,7 @@ const Home = () => {
                 and see completed tasks.
               </Typography>
               <Typography variant="h6" sx={{ mt: 3 }}>
-                Please login to view your tasks.
+                Please <Link to="/login">login</Link> to view your tasks.
               </Typography>
             </Box>
           )}

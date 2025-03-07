@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import { useSnackbar } from "notistack";
 import { Button, TextField } from "@mui/material";
-import { GoogleLogin } from "@react-oauth/google";
+// import { GoogleLogin } from "@react-oauth/google";
 
 import authStyles from "../auth.module.css";
 import loginStyles from "./login.module.css";
@@ -13,6 +13,8 @@ import axios from "axios";
 import API_BASE_URL from "../../config";
 
 import { useAuth } from "../../context/AuthContext";
+
+// import { jwtDecode } from "jwt-decode";
 
 const login = () => {
   const { login } = useAuth();
@@ -91,14 +93,20 @@ const login = () => {
     }
   };
 
-  const handleSuccess = (response: any) => {
-    console.log("Google Login Success:", response);
-    enqueueSnackbar("Logged in successfully!", { variant: "success" });
-  };
+  // const handleSuccess = async (response: any) => {
+  //   if (response.credential) {
+  //     console.log("Google Login Success:", response);
 
-  const handleError = () => {
-    enqueueSnackbar("Google login failed!", { variant: "error" });
-  };
+  //     const decoded: any = jwtDecode(response.credential); // Decode JWT token
+  //     console.log("Decoded Google User:", decoded);
+
+  //     const { email, name, picture } = decoded;
+  //   }
+  // };
+
+  // const handleError = () => {
+  //   enqueueSnackbar("Google login failed!", { variant: "error" });
+  // };
 
   return (
     <div className={authStyles.container}>
@@ -140,7 +148,7 @@ const login = () => {
 
         <p className={loginStyles.orText}>— OR —</p>
 
-        <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
+        {/* <GoogleLogin onSuccess={handleSuccess} onError={handleError} /> */}
 
         <p className={authStyles.register}>
           Need an account? <Link to="/register">Register here</Link>

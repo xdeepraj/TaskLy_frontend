@@ -14,7 +14,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import AssignmentLateOutlinedIcon from "@mui/icons-material/AssignmentLateOutlined";
 
 const pages = ["FAQ", "About"];
 
@@ -53,7 +53,9 @@ function ResponsiveAppBar() {
     <AppBar position="static" color="secondary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <AssignmentLateOutlinedIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1, fontSize: 40 }}
+          />
 
           {/* Mobile Menu */}
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -119,7 +121,6 @@ function ResponsiveAppBar() {
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt={finalUserData.firstname} />
-                  {/* <Avatar alt={userData.firstname} src={userData.avatar || "/static/images/avatar/default.jpg"} /> */}
                 </IconButton>
               </Tooltip>
               <Menu
@@ -143,9 +144,14 @@ function ResponsiveAppBar() {
               </Menu>
             </Box>
           ) : (
-            <Button component={Link} to="/login" sx={{ color: "white" }}>
-              Login
-            </Button>
+            <>
+              <Button component={Link} to="/register" sx={{ color: "white" }}>
+                Register
+              </Button>
+              <Button component={Link} to="/login" sx={{ color: "white" }}>
+                Login
+              </Button>
+            </>
           )}
         </Toolbar>
       </Container>
