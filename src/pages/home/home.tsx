@@ -38,10 +38,10 @@ const Home = () => {
       <Navbar />
 
       {/* Main Content */}
-      <Box component="main" flexGrow={1} sx={{ mx: 1, my: 1 }}>
+      <Box component="main" flexGrow={1} sx={{ my: 1 }}>
         <Container>
           {finalAccessToken ? (
-            <Box sx={{ mt: 2 }}>
+            <Box sx={{ mt: 2, ml: 0 }}>
               <Typography variant="h4" sx={{ mb: 2 }}>
                 Welcome, {finalUserData?.firstname}!
               </Typography>
