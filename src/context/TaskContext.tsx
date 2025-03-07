@@ -62,8 +62,8 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
       );
       const data = await response.json();
 
-      if (Array.isArray(data.tasks.rows)) {
-        setTasks(data.tasks.rows);
+      if (Array.isArray(data.tasks)) {
+        setTasks(data.tasks);
       }
     } catch (error) {
       console.error("Failed to fetch tasks from database:", error);
