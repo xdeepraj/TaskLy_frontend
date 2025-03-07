@@ -50,9 +50,27 @@ const Home = () => {
               <TaskBox />
             </Box>
           ) : (
-            <Typography variant="h6" sx={{ mt: 3 }}>
-              Hi
-            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              textAlign="center"
+              minHeight="50vh" // Ensures it has enough height to center properly
+            >
+              <Typography variant="h4" sx={{ mt: 3 }}>
+                Welcome to TaskLy.
+              </Typography>
+              <Typography variant="h6" sx={{ mt: 3 }}>
+                Where you can manage all your current & future tasks.
+              </Typography>
+              <Typography variant="h6" sx={{ mt: 3 }}>
+                and see completed tasks.
+              </Typography>
+              <Typography variant="h6" sx={{ mt: 3 }}>
+                Please login to view your tasks.
+              </Typography>
+            </Box>
           )}
         </Container>
       </Box>

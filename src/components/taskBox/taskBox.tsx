@@ -135,7 +135,15 @@ const TaskBox = () => {
       </Box>
 
       {/* Filters */}
-      <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          gap: 2,
+          mb: 2,
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: { xs: "stretch", sm: "center" },
+        }}
+      >
         {/* Priority Filter */}
         <Select
           value={priorityFilter}

@@ -34,3 +34,16 @@
   margin-top: 20px;
   text-align: center;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+
+  .formWrapper {
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+  }
+}
